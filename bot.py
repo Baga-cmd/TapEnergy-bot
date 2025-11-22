@@ -6,7 +6,7 @@ import json
 
 # Загрузка токена
 load_dotenv()
-TOKEN = os.getenv("TELEGRAM_TOKEN")
+TOKEN = os.getenv("8272440601:AAFyIMTEWnqTxdXD_L1-9jbgYsWgwjKJlKQ")
 
 # Файл для хранения прогресса
 SAVE_FILE = "progress.json"
@@ -100,4 +100,5 @@ app.add_handler(CallbackQueryHandler(button))
 app.job_queue.run_repeating(lambda context: asyncio.create_task(auto_income_task(app)), interval=5)
 
 print("Bot is running...")
+
 app.run_polling()
